@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+<h3>
+    Check if a security is a Non-Marketable Security
+    <small class="text-muted">Enter a symbol or cusip below</small>
+</h3>
+<p></p>
+<p></p>
+<div class="app" ng-app="myApp"
+     ng-controller="myCont">
+    <p>Enter Cusip/Symbol: <input type="text" ng-model="localInput"> </p>
+    <p>The results below are Non-Marketable securities and can be removed by brokers.</p>
+    <table class="table">
+        <thead>
+        <th scope="col"> Symbol</th>
+        <th scope="col"> Cusip</th>
+        <th scope="col"> Instrument Type</th>
+        <th scope="col"> Exchange ID</th>
+        <th scope="col"> Description</th>
+        <th scope="col"> Routing Destination</th>
+        </thead>
+        <tr ng-repeat="stocks in list">
+            <td ng-if=" '*' == localInput || localInput != '' && stocks.symbol == localInput.toUpperCase() || stocks.cusip == localInput.toUpperCase()">
+                {{stocks.symbol}}
+            </td>
+            <td ng-if=" '*' == localInput || localInput != '' &&  stocks.symbol == localInput.toUpperCase() || stocks.cusip == localInput.toUpperCase()">
+                {{stocks.cusip}}
+            </td>
+            <td ng-if=" '*' == localInput || localInput != '' &&  stocks.symbol == localInput.toUpperCase() || stocks.cusip == localInput.toUpperCase()">
+                {{stocks.exid}}
+            </td>
+            <td ng-if=" '*' == localInput || localInput != '' && stocks.symbol == localInput.toUpperCase() || stocks.cusip == localInput.toUpperCase()">
+                {{stocks.desc}}
+            </td>
+            <td ng-if=" '*' == localInput || localInput != '' && stocks.symbol == localInput.toUpperCase() || stocks.cusip == localInput.toUpperCase()">
+                {{stocks.desc}}
+            </td>
+            <td ng-if=" '*' == localInput ||  localInput != '' && stocks.symbol == localInput.toUpperCase() || stocks.cusip == localInput.toUpperCase()">
+                {{stocks.routdest}}
+            </td>
+        </tr>
+    </table>
+    <!--    <p>-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- </p>
+    <p>post new stock</p>
+      <p>Symbol:<input type="text" ng-model="addSymbol"></p>
+      <p>Cusip:<input type="text" ng-model="add"></p>-->
+    <script src="js/angularBE.js"></script>
+</div>
+</body>
