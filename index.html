@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Server Resources</title>
 </head>
 <body>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">Date</th>
-        <th scope="col">Download Button</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>8/18/2020 9:52 AM</td>
-        <td>
-            <form method="get" action="Zips/McNellyPack-1.0.0.zip">
-                <button type="submit">Download!</button>
-            </form>
-        </td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-    </tr>
-    </tbody>
-</table>
+<h1>McInelly Modpack</h1>
+<div class="container">
+    <h2>How to Install the Modpack</h2>
+    <ol>
+        <li>Download Twitch - <a href="https://desktop.twitchsvc.net/installer/windows/TwitchSetup.exe">Windows</a> | <a href="https://desktop.twitchsvc.net/installer/mac/Twitch.dmg">Mac</a></li>
+        <li>Click the download link below for the newest version</li>
+        <li>Sign up for Twitch.tv using program after installing</li>
+        <li>Click on Mods at the Top</li>
+        <li>Select Minecraft</li>
+        <li>Click Create Custom Profile</li>
+        <li>At the top of the popup click import</li>
+        <li>Navigate to and select the download from step 2</li>
+        <li>Click play!</li>
+    </ol>
+</div>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Version</th>
+                <th scope="col">Download Button</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>8/18/2020 9:52 AM</td>
+                <td>1.0.0</td>
+                <td>
+                    <form method="get" action="Zips/McNellyPack-1.0.0.zip">
+                        <button type="submit">Download!</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </body>
